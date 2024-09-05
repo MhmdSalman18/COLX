@@ -7,7 +7,18 @@ export default{
             tasks:['one','two','three'],
             link:"https://www.google.com/"
         }
+    },
+    methods:{
+        toggleButton1(){
+            if(this.status===true){
+                this.status=false
+            }
+            else{
+                this.status=true
+            }
+        }
     }
+    
 }
 </script>
 
@@ -20,5 +31,5 @@ export default{
  <ul>
     <li v-for="task in tasks">{{ task }}</li>
  </ul>
-
+<button v-on:click="toggleButton1">set status</button>
 </template>
